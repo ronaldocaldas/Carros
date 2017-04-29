@@ -2,6 +2,9 @@ package br.com.kurtphpr.domain;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Carro implements Serializable{
 
 	/**
