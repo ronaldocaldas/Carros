@@ -6,13 +6,14 @@ import br.com.kurtphpr.domain.Carro;
 import br.com.kurtphpr.domain.CarroService;
 import junit.framework.TestCase;
 
+
 public class CarroTest extends TestCase {
 	private CarroService carroService;
-	
+
 	@Override
-	protected void setUp() throws Exception{
+	protected void setUp() throws Exception {
 		super.setUp();
-		//Cria o bean pelo Spring
+		// Cria o "bean" pelo Spring.
 		carroService = (CarroService) SpringUtil.getInstance().getBean(CarroService.class);
 	}
 
@@ -31,6 +32,7 @@ public class CarroTest extends TestCase {
 		Carro bugatti = carroService.findByName("Bugatti Veyron").get(0);
 		assertEquals("Bugatti Veyron", bugatti.getNome());
 	}
+
 	public void testSalvarDeletarCarro() {
 		Carro c = new Carro();
 		c.setNome("Teste");
